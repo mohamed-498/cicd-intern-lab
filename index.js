@@ -17,6 +17,10 @@ app.get('/add/:a/:b', (req, res) => {
   const b = parseInt(req.params.b);
   res.json({ result: a + b });
 });
+// Route 4: Goodbye
+app.get('/goodbye', (req, res) => {
+    res.json({ message: 'Goodbye! See you next time.' });
+  });
 
 // Start server only when run directly (not during tests)
 if (require.main === module) {
